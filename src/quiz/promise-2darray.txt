@@ -1,1 +1,11 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+1. "Sum called ... " indicates the beginning of the sum2DArray() function execution. This gets logged in the main thread. 
+2. "returning from sum" suggests the function execution reaches the end of the sum2DArray() function block,
+3. "rejecting ... " appears when the input parameter provided to sum2DArray() is not an array. This appears before the execution of
+    sumPromise1 because it is faster to reject an invalid input, in this case sumPromise2. 
+4. "returning from sum" appears again after the rejection handling block.
+5. "Sum called ... " is logged again when sum2DArray() is called with 'array2D'.
+6. "resolving ... " is logged when the promise is resolved with a valid input array.
+7. "Sum Promise 1: 45" shows the successful resolution of the promise with the correct sum value.
+8. "Sum Promise 2 Error: BAD INPUT: Expected array as input" is logged due to rejection of the 
+    promise when an invalid input is provided. In our case, we passed a string instead of an array. 
