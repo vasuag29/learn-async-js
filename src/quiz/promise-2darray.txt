@@ -1,1 +1,13 @@
 Explain the code execution based on the order of the messages logged in src/quiz/promise-2darray.txt.
+
+This code defines a function called sum2DArray which takes a 2-dimensional array as input, 
+calculates the sum of all elements in the array, and returns a promise. 
+Inside the promise, there's a timeout function simulating an asynchronous operation. 
+If the input is a valid array, it calculates the sum and resolves the promise with the sum. 
+If the input is not an array, it rejects the promise with a message indicating bad input.
+
+The code then demonstrates the usage of the sum2DArray function by creating two instances of promises, 
+sumPromise1 and sumPromise2, with different inputs. sumPromise1 is created with a valid 2-dimensional array, 
+so it should resolve with the sum of its elements. sumPromise2 is created with a string instead of an array, 
+so it should reject with a message indicating bad input. Both promises are then chained with .then() and .catch() handlers 
+to handle the resolution and rejection accordingly. Finally, the promises along with their states are logged to the console.
